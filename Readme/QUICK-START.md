@@ -1,394 +1,237 @@
-# 🚀 Quick Start Guide
+# 🚀 คู่มือเริ่มต้นใช้งานอย่างรวดเร็ว (Quick Start Guide)
 
-> Get started with the Agent Wallboard system in 5 minutes!
-
----
-
-## 📖 What You'll Learn
-
-- ✅ How to use Agent Dashboard
-- ✅ How to use Supervisor Dashboard
-- ✅ Keyboard shortcuts
-- ✅ Common workflows
-- ✅ Tips & tricks
+> **เรียนรู้การใช้งานระบบ Agent Wallboard ภายใน 5 นาที**
 
 ---
 
-## 👤 For Call Center Agents
+## 📖 สิ่งที่คุณจะได้เรียนรู้
 
-### First Login
-
-1. **Open the application**
-   - The system will load with Agent Dashboard by default
-   - You'll see your personal stats widget in the main area
-
-2. **Set your status**
-   - Look at the top-right corner of the header
-   - Click the status dropdown (shows current status)
-   - Select "Available" to start receiving calls
-
-   ```
-   🟢 Available  ▾  ← Click here
-   ```
-
-3. **Check your messages**
-   - Look at the right sidebar
-   - Red bordered items are unread
-   - Click "Unread" filter to see only unread messages
-
-### Daily Workflow
-
-#### ✅ Morning Routine (8:45 AM)
-
-```
-1. Login to system
-2. Check messages (right sidebar)
-   - Read urgent messages first (red background)
-3. Check schedule (main area, scroll down)
-   - Note your breaks and meetings
-4. Set status to "Available"
-5. Ready to take calls! 🎉
-```
-
-#### ✅ During Shift
-
-**When taking a call:**
-- Status automatically changes to "Busy" 🟠
-- Timer shows call duration
-- Your stats update in real-time
-
-**When taking a break:**
-- Click status dropdown → Select "Break" 🔵
-- System shows break timer
-- Check upcoming schedule
-
-**When reading messages:**
-- Click unread message to expand
-- Click "Mark as Read" when done
-- Use filters to find specific messages:
-  - **All**: See everything
-  - **Unread**: Focus on new messages
-  - **Urgent**: Priority items only
-
-#### ✅ End of Day
-
-```
-1. Check final stats
-   - Calls today: Did you hit your target?
-   - Avg handle time: How did you perform?
-   - CSAT: Customer satisfaction score
-2. Read any remaining messages
-3. Set status to "Offline" ⚫
-4. Log out
-```
-
-### ⌨️ Keyboard Shortcuts
-
-Learn these to work faster!
-
-| Shortcut | Action | When to Use |
-|----------|--------|-------------|
-| **F2** | Set status to Available | Start of shift, after break |
-| **F3** | Set status to Busy | Manual call logging |
-| **F4** | Set status to Break | Going on break |
-| **Ctrl+M** | Open messages | Quick message check |
-
-**Pro Tip:** Use F2-F4 shortcuts instead of clicking! Saves 2-3 seconds per change.
-
-### 📊 Understanding Your Stats
-
-#### **Calls Progress**
-```
-Calls: 12/45 ▰▰▰▰▰▰▰▱▱▱▱▱▱▱ 73%
-       ↑   ↑                ↑
-    Current Target      Percentage
-```
-
-- **Green bar**: Good progress
-- **Yellow bar**: Behind schedule
-- **Number below**: Calls remaining
-
-#### **Avg Handle Time**
-```
-Avg Handle: 5m 32s
-⏱ ↓18s vs yesterday
-   ↑
-  Trend (good = down, bad = up)
-```
-
-- **Green ↓**: You're getting faster! 🎉
-- **Red ↑**: Taking longer than yesterday
-
-#### **Customer Satisfaction**
-```
-Satisfaction: 4.8⭐
-📊 ↑0.2 this week
-```
-
-- **4.5-5.0**: Excellent! Keep it up 🌟
-- **4.0-4.4**: Good work 👍
-- **<4.0**: Talk to supervisor for coaching
+✅ วิธีใช้งานแดชบอร์ดสำหรับพนักงาน (Agent Dashboard)  
+✅ วิธีใช้งานแดชบอร์ดสำหรับหัวหน้างาน (Supervisor Dashboard)  
+✅ คีย์ลัดที่ควรรู้ (Keyboard Shortcuts)  
+✅ ขั้นตอนการทำงานประจำวัน (Common Workflows)  
+✅ เคล็ดลับการใช้งาน (Tips & Tricks)
 
 ---
 
-## 👔 For Supervisors
+## 👤 สำหรับพนักงานคอลเซ็นเตอร์ (Call Center Agents)
 
-### Dashboard Overview
+### การเข้าสู่ระบบครั้งแรก (First Login)
 
-When you open Supervisor Dashboard, you'll see:
+1. เปิดแอปพลิเคชัน  
+2. ระบบจะโหลดหน้า **Agent Dashboard** โดยอัตโนมัติ  
+3. คุณจะเห็นวิดเจ็ตแสดงสถิติส่วนตัวในพื้นที่หลักของหน้าจอ  
+
+### การตั้งค่าสถานะ (Set Your Status)
+
+- มองไปที่มุมขวาบนของหน้าจอ  
+- คลิกเมนูสถานะ (dropdown)  
+- เลือก “Available” เพื่อเริ่มรับสาย  
+
+🟢 **Available ▾** ← คลิกที่นี่
+
+---
+
+### ตรวจสอบข้อความ (Check Your Messages)
+
+- แถบด้านขวาคือพื้นที่ข้อความ (Message Center)  
+- ข้อความที่ยังไม่ได้อ่านจะมีกรอบสีแดง  
+- คลิกแท็บ “Unread” เพื่อกรองเฉพาะข้อความที่ยังไม่ได้อ่าน  
+
+---
+
+### ขั้นตอนประจำวัน (Daily Workflow)
+
+#### ✅ ช่วงเช้า (8:45 น.)
+
+1. เข้าสู่ระบบ  
+2. ตรวจสอบข้อความสำคัญ (โดยเฉพาะข้อความเร่งด่วน 🔴)  
+3. ตรวจสอบตารางเวลาของคุณ (break / meeting)  
+4. ตั้งสถานะเป็น “Available”  
+5. พร้อมเริ่มงาน! 🎉
+
+#### ✅ ระหว่างกะทำงาน (During Shift)
+
+- เมื่อรับสาย → ระบบเปลี่ยนสถานะเป็น “Busy” 🟠 โดยอัตโนมัติ  
+- ระบบแสดงเวลาสนทนาและอัปเดตสถิติแบบเรียลไทม์  
+- หากพักเบรก → คลิกสถานะ → เลือก “Break” 🔵 ระบบจะแสดงตัวจับเวลาเบรก  
+- อ่านข้อความ → คลิกเพื่อขยาย → กด “Mark as Read” เมื่ออ่านแล้วเสร็จ  
+
+#### ✅ สิ้นสุดวันทำงาน (End of Day)
+
+1. ตรวจสอบสถิติสุดท้ายของวัน  
+   - จำนวนสายทั้งหมดวันนี้  
+   - เวลาเฉลี่ยต่อสาย  
+   - คะแนนความพึงพอใจลูกค้า (CSAT)  
+2. อ่านข้อความค้างทั้งหมด  
+3. ตั้งสถานะเป็น “Offline” ⚫  
+4. ออกจากระบบ (Logout)
+
+---
+
+## ⌨️ คีย์ลัดสำคัญ (Keyboard Shortcuts)
+
+| คีย์ | การทำงาน | ใช้เมื่อ |
+|------|------------|-----------|
+| F2 | ตั้งสถานะเป็น Available | เริ่มงาน / หลังพัก |
+| F3 | ตั้งสถานะเป็น Busy | ระหว่างรับสาย |
+| F4 | ตั้งสถานะเป็น Break | เมื่อออกพัก |
+| Ctrl+M | เปิดหน้า Message Center | ตรวจสอบข้อความ |
+
+💡 **คำแนะนำ:** ใช้ F2–F4 แทนการคลิก จะช่วยประหยัดเวลา 2–3 วินาทีต่อการเปลี่ยนสถานะ
+
+---
+
+## 📊 ทำความเข้าใจสถิติของคุณ (Understanding Your Stats)
+
+### 📞 ความคืบหน้าของสาย (Calls Progress)
+**Calls: 12/45 ▰▰▰▰▰▰▰▱▱▱ (73%)**  
+- แถบสีเขียว: ความคืบหน้าดี  
+- แถบสีเหลือง: ตามหลังเป้าหมาย  
+- ตัวเลขด้านล่าง: จำนวนสายที่เหลืออยู่  
+
+### ⏱ เวลาเฉลี่ยต่อสาย (Average Handle Time)
+**Avg Handle: 5m 32s ↓18s (เทียบกับเมื่อวาน)**  
+- ลูกศรสีเขียว ↓ = ทำได้เร็วขึ้น  
+- ลูกศรสีแดง ↑ = ใช้เวลานานขึ้น  
+
+### ⭐ คะแนนความพึงพอใจ (Customer Satisfaction)
+**Satisfaction: 4.8⭐ (+0.2 สัปดาห์นี้)**  
+- 4.5–5.0: ยอดเยี่ยม 🌟  
+- 4.0–4.4: ดี 👍  
+- <4.0: ควรปรึกษาหัวหน้างานเพื่อปรับปรุง
+
+---
+
+## 👔 สำหรับหัวหน้างาน (Supervisors)
+
+### ภาพรวมแดชบอร์ด (Dashboard Overview)
 
 ```
 ┌─────────────────────────────────────┐
-│ METRICS (Top)                       │
-│ Total | Online | Calls | Time | CSAT│
-└─────────────────────────────────────┘
-│ ALERTS (If any)                     │
-│ ⚠️  Issues needing attention         │
-└─────────────────────────────────────┘
-│ FILTERS (Middle)                    │
+│ METRICS (ด้านบน)                    │
+│ Total | Online | Calls | Time | CSAT │
+├─────────────────────────────────────┤
+│ ALERTS (การแจ้งเตือน)               │
+│ ⚠️  ปัญหาที่ต้องตรวจสอบ             │
+├─────────────────────────────────────┤
+│ FILTERS (ตัวกรอง)                   │
 │ [All] [Available] [Busy] [Break]... │
+├─────────────────────────────────────┤
+│ AGENT CARDS (รายชื่อพนักงาน)        │
+│ 8 คนต่อหนึ่งหน้า                   │
 └─────────────────────────────────────┘
-│ AGENT CARDS (Main)                  │
-│ 8 agents visible at once           │
-└─────────────────────────────────────┘
-```
-
-### Common Tasks
-
-#### ✅ Monitor Team Performance
-
-**Check Team Metrics (Top Bar):**
-```
-Total Agents: 12    ← Team size
-Online Now: 8       ← Currently active
-Calls Today: 147    ← Total team calls
-Avg Time: 4m 32s    ← Team average
-CSAT: 4.7⭐         ← Team satisfaction
-
-SLA: 94% (Target: 95%) ⚠️  ← Needs attention!
-```
-
-**What to watch:**
-- 🟢 SLA ≥ 95%: Great! Team performing well
-- 🟠 SLA < 95%: Need to improve response time
-- 🔴 SLA < 90%: Critical, take action immediately
-
-#### ✅ Check Individual Agents
-
-**Quick Scan (Grid View):**
-```
-Look for:
-🔥 = Long call (needs attention)
-⏰ = Break ending soon
-🟢 = Available (ready for calls)
-🟠 = Busy (on call)
-```
-
-**Detailed View (Click Card):**
-1. Click any agent card
-2. Modal opens with full details
-3. See tabs:
-   - **Overview**: Today's stats
-   - **Performance**: Charts (coming soon)
-   - **Activity**: Timeline (coming soon)
-
-#### ✅ Handle Alerts
-
-**When you see orange alert panel:**
-
-```
-⚠️  Active Alerts (1)
-
-🔥 Emma Davis (AG002) - Long call duration
-   Current: 12m 20s | Average: 6m 45s
-   
-   [Send Message] [View Detail] [Dismiss]
-```
-
-**Actions:**
-1. **Send Message**: Quick check-in
-   - "Do you need help with this call?"
-   - "Let me know if you need escalation"
-
-2. **View Detail**: See full agent info
-   - Check call history
-   - Review performance trends
-
-3. **Dismiss**: If handled or false alarm
-
-#### ✅ Send Messages to Team
-
-**Quick Message (From Card):**
-```
-1. Hover over agent card
-2. Click [💬 Message] button
-3. Type message
-4. Send
-```
-
-**Broadcast Message (To All):**
-```
-1. Click "Send Message" button (top-right)
-2. Select "Team: Customer Service"
-3. Type message
-4. Send to all agents
-```
-
-**Message Templates:**
-- "Break approved - 15 mins"
-- "Team meeting in 15 minutes"
-- "Great job today! Keep it up 👍"
-- "Please check email for new policy"
-
-#### ✅ Filter and Search
-
-**Filter by Status:**
-```
-[All 12] ← See everyone
-[🟢 Available 4] ← Only available agents
-[🟠 Busy 3] ← Who's on calls
-[🔵 Break 1] ← On break
-[⚫ Offline 4] ← Not working
-```
-
-**Search Agents:**
-```
-🔍 [Search agents...] ← Type name or ID
-```
-
-**Examples:**
-- Search "John" → Find John Smith
-- Search "AG001" → Find agent by ID
-- Search "Emma" → Find Emma Davis
-
-### 📅 Throughout the Day
-
-#### **Morning (9:00 AM)**
-```
-✅ Check team metrics
-✅ Review SLA from yesterday
-✅ Check who's online
-✅ Send morning announcement if needed
-```
-
-#### **Mid-Morning (10:30 AM)**
-```
-✅ Check SLA progress (should be ~95%+)
-✅ Monitor for alerts
-✅ Identify agents needing support
-✅ Approve break requests
-```
-
-#### **Lunch Time (12:00 PM)**
-```
-✅ Ensure break rotation is smooth
-✅ Maintain minimum online agents
-✅ Check call volume vs. availability
-```
-
-#### **Afternoon (3:00 PM)**
-```
-✅ Review performance so far
-✅ Identify top performers
-✅ Coach underperforming agents
-✅ Adjust team if needed
-```
-
-#### **End of Day (5:00 PM)**
-```
-✅ Review final metrics
-✅ Note any issues for tomorrow
-✅ Send closing announcement
-✅ Thank team for good work
 ```
 
 ---
 
-## 💡 Tips & Tricks
+### ✅ การตรวจสอบผลการทำงานของทีม (Monitor Team Performance)
 
-### For Agents
+- **Total Agents:** 12  
+- **Online Now:** 8  
+- **Calls Today:** 147  
+- **Avg Time:** 4m 32s  
+- **CSAT:** 4.7⭐  
+- **SLA:** 94% (เป้าหมาย 95%) ⚠️  
 
-1. **Use keyboard shortcuts** - F2, F3, F4 faster than clicking
-2. **Check messages first** - Start day by reading urgent items
-3. **Monitor your stats** - Stay aware of progress throughout day
-4. **Take scheduled breaks** - System shows them in advance
-5. **Mark messages as read** - Keep inbox clean and organized
-
-### For Supervisors
-
-1. **Use filters effectively** - Don't scroll, filter instead
-2. **Respond to alerts quickly** - They appear for a reason
-3. **Check grid view regularly** - See team at a glance
-4. **Use detail modal** - Deep dive into agent performance
-5. **Send encouragement** - Quick messages boost morale
-6. **Hide offline agents** - Focus on active team members
+🟢 ≥95% = เยี่ยมมาก  
+🟠 90–94% = ต้องปรับปรุง  
+🔴 <90% = ต้องดำเนินการทันที
 
 ---
 
-## ❓ Common Questions
+### ✅ ตรวจสอบพนักงานรายบุคคล (Check Individual Agents)
 
-### Agent Questions
+- 🔥 = โทรนานเกินปกติ  
+- ⏰ = ใกล้หมดเวลาพัก  
+- 🟢 = พร้อมรับสาย  
+- 🟠 = กำลังรับสาย  
 
-**Q: Why can't I see my stats?**
-A: Stats widget is in the left column. Scroll up if needed. It has a blue gradient background.
-
-**Q: Where are my unread messages?**
-A: Right sidebar. Red border = unread. Or click "Unread" filter.
-
-**Q: How do I change status quickly?**
-A: Use keyboard shortcuts! F2 = Available, F3 = Busy, F4 = Break.
-
-**Q: What does the percentage mean in stats?**
-A: It's your progress toward daily target. 73% = 12 out of 45 calls done.
-
-**Q: Can I see yesterday's performance?**
-A: Click "View Details →" button in stats widget.
-
-### Supervisor Questions
-
-**Q: Why can I only see 8 agents?**
-A: That's by design! 100% more than before (was 4). Scroll for more or use filters.
-
-**Q: What does 🔥 icon mean on agent card?**
-A: Long call duration - agent may need help. Check the alert panel.
-
-**Q: How do I message an agent quickly?**
-A: Hover over their card, click [💬 Message] button.
-
-**Q: Can I see offline agents?**
-A: Yes! Scroll down, click "Show X Offline Agents ▾" button.
-
-**Q: What if SLA is below target?**
-A: 
-1. Check available agents (increase if possible)
-2. Look for long calls (help agents)
-3. Review call distribution
-4. Consider adding more staff
+คลิกการ์ดเพื่อดูรายละเอียดเชิงลึก (Modal) เช่น  
+- **Overview:** ข้อมูลสรุปวันนี้  
+- **Performance:** กราฟและแนวโน้ม  
+- **Activity:** ประวัติการทำงาน  
 
 ---
 
-## 🆘 Need Help?
+### ✅ จัดการการแจ้งเตือน (Handle Alerts)
 
-### Agent Support
-- **Messages**: Send message to supervisor
-- **Help Button**: Click "Request Help" in Quick Actions
-- **Phone**: Call supervisor extension
+เมื่อเห็นแผงสีส้ม “Active Alerts”:  
+> 🔥 *Emma Davis (AG002) – โทรเกิน 12 นาที (ค่าเฉลี่ย 6 นาที)*
 
-### Supervisor Support
-- **IT Support**: For technical issues
-- **HR**: For staffing questions
-- **Management**: For policy decisions
+การกระทำที่แนะนำ:
+- **Send Message:** “ต้องการความช่วยเหลือไหม?”  
+- **View Detail:** ตรวจสอบข้อมูลเชิงลึก  
+- **Dismiss:** ปิดการแจ้งเตือนหลังตรวจสอบแล้ว  
 
 ---
 
-## 📚 Additional Resources
+### ✅ การส่งข้อความ (Send Messages)
 
-- [README.md](README.md) - Full documentation
-- [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) - Why we made these choices
-- [CHANGELOG.md](CHANGELOG.md) - Version history
+**ส่งถึงรายบุคคล:**  
+1. เลื่อนเมาส์บนการ์ดพนักงาน  
+2. คลิก [💬 Message]  
+3. พิมพ์ข้อความ → กด Send  
+
+**ส่งถึงทีม (Broadcast):**  
+1. คลิกปุ่ม “Send Message” (มุมขวาบน)  
+2. เลือกทีม เช่น “Customer Service”  
+3. พิมพ์ข้อความ → กด Send  
+
+ตัวอย่างข้อความ:
+- “Break อนุมัติ 15 นาที”  
+- “ประชุมทีมอีก 15 นาที”  
+- “ทำได้ดีมากวันนี้! 👍”  
 
 ---
 
-**Happy monitoring! 🎉**
+### ✅ การกรองและค้นหา (Filter and Search)
 
-*Last updated: October 16, 2025*
+- [All]: แสดงทุกคน  
+- [Available]: พร้อมรับสาย  
+- [Busy]: กำลังรับสาย  
+- [Break]: กำลังพัก  
+- [Offline]: ไม่ออนไลน์  
+
+ค้นหาชื่อหรือรหัสเช่น “John”, “AG001”, “Emma”
+
+---
+
+## 📅 ตารางการตรวจสอบระหว่างวัน
+
+**เช้า (9:00 น.)**  
+ตรวจสอบสถิติทีม / SLA / ส่งประกาศเริ่มวัน  
+
+**สาย (10:30 น.)**  
+ตรวจสอบ SLA ≥95% / ดู Alert / อนุมัติการพัก  
+
+**กลางวัน (12:00 น.)**  
+ควบคุมการสลับพัก / ตรวจสอบปริมาณสาย  
+
+**บ่าย (15:00 น.)**  
+ติดตามผลงาน / แนะนำทีม / ปรับโครงสร้างถ้าจำเป็น  
+
+**เย็น (17:00 น.)**  
+สรุปสถิติ / บันทึกปัญหา / ขอบคุณทีมงาน  
+
+---
+
+## 💡 เคล็ดลับการใช้งาน (Tips & Tricks)
+
+**สำหรับพนักงาน:**  
+- ใช้คีย์ลัด (F2–F4) ประหยัดเวลา  
+- ตรวจสอบข้อความก่อนเริ่มงาน  
+- ดูสถิติระหว่างวันเพื่อรักษาเป้าหมาย  
+- กด “Mark as Read” หลังอ่านเสมอ  
+
+**สำหรับหัวหน้างาน:**  
+- ใช้ filter แทนการ scroll  
+- ตอบสนองต่อ Alert ทันที  
+- ตรวจสอบ Grid View เป็นระยะ  
+- ใช้ข้อความสั้นๆ สร้างกำลังใจให้ทีม  
+
+---
+
+
+_อัปเดตล่าสุด: 16 ตุลาคม 2025_  
+_จัดทำโดยทีมพัฒนา Agent Wallboard System_
