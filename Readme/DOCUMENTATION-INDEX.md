@@ -1,481 +1,266 @@
-# 📚 Documentation Index
+# 📚 ดัชนีเอกสารระบบ (Documentation Index)
 
-> **Complete guide to all documentation files**
-
----
-
-## 🗂️ All Documentation Files
-
-### 📖 Main Documentation
-
-| File | Description | Pages | Best For |
-|------|-------------|-------|----------|
-| **[README.md](README.md)** | Complete project overview | ~60 | Everyone - start here |
-| **[INSTALLATION.md](INSTALLATION.md)** | Installation & setup guide | ~50 | Developers, setup |
-| **[USAGE-GUIDE.md](USAGE-GUIDE.md)** | Step-by-step usage instructions | ~50 | New users, training |
-| **[QUICK-START.md](QUICK-START.md)** | Quick reference guide | ~40 | Daily use, quick lookup |
-| **[VISUAL-REFERENCE.md](VISUAL-REFERENCE.md)** | Visual layout guide | ~30 | Design reference |
-
-### 📊 Business & Strategy
-
-| File | Description | Pages | Best For |
-|------|-------------|-------|----------|
-| **[PROJECT-SUMMARY.md](PROJECT-SUMMARY.md)** | Executive summary | ~40 | Management, stakeholders |
-| **[DESIGN-DECISIONS.md](DESIGN-DECISIONS.md)** | Design rationale | ~80 | Product managers, designers |
-| **[CHANGELOG.md](CHANGELOG.md)** | Version history | ~20 | Development team |
-
-### 🛠️ Technical Documentation
-
-| File | Description | Pages | Best For |
-|------|-------------|-------|----------|
-| **[COMPONENTS.md](COMPONENTS.md)** | Component API docs | ~60 | Developers, engineers |
-| **[Attributions.md](Attributions.md)** | Credits and licenses | ~5 | Legal, compliance |
-
-### 📂 Project Files
-
-| File | Description | Purpose |
-|------|-------------|---------|
-| **[.gitignore](.gitignore)** | Git ignore rules | Version control |
-| **[LICENSE](LICENSE)** | MIT License | Legal |
+> คู่มือสรุปภาพรวมของเอกสารทั้งหมดในระบบ **Agent Wallboard**  
+> จัดทำเพื่อใช้ในการอ้างอิง การพัฒนา การฝึกอบรม และการนำเสนอทางธุรกิจ
 
 ---
 
-## 🎯 Quick Navigation by Role
+## 🗂️ เอกสารทั้งหมด (All Documentation Files)
 
-### 👤 **I'm a Call Center Agent**
+### 📖 เอกสารหลัก (Main Documentation)
 
-**Start here:**
-1. [USAGE-GUIDE.md](USAGE-GUIDE.md) - Read "Agent View" section
-2. [QUICK-START.md](QUICK-START.md) - Keep for daily reference
-
-**Learn more:**
-- [README.md](README.md) - Section: "How to Use" → "Agent View"
-- [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) - See layout diagrams
-
-**Daily use:**
-- [QUICK-START.md](QUICK-START.md) - Keyboard shortcuts, common tasks
+| ไฟล์ | รายละเอียด | จำนวนหน้า | เหมาะสำหรับ |
+|------|--------------|-------------|---------------|
+| **README.md** | ภาพรวมโครงการทั้งหมด | ~60 | ทุกคน (จุดเริ่มต้นของเอกสารทั้งหมด) |
+| **INSTALLATION.md** | คู่มือการติดตั้งและตั้งค่า | ~50 | นักพัฒนา, ทีมติดตั้งระบบ |
+| **USAGE-GUIDE.md** | คู่มือการใช้งานแบบละเอียด (ทีละขั้นตอน) | ~50 | ผู้ใช้งานใหม่, ฝึกอบรม |
+| **QUICK-START.md** | คู่มืออ้างอิงอย่างรวดเร็ว | ~40 | การใช้งานประจำวัน |
+| **VISUAL-REFERENCE.md** | คู่มือโครงร่างภาพรวมเชิงภาพ | ~30 | นักออกแบบ, อ้างอิงดีไซน์ |
 
 ---
 
-### 👔 **I'm a Team Supervisor**
+### 📊 เอกสารเชิงธุรกิจและกลยุทธ์ (Business & Strategy)
 
-**Start here:**
-1. [USAGE-GUIDE.md](USAGE-GUIDE.md) - Read "Supervisor View" section
-2. [PROJECT-SUMMARY.md](PROJECT-SUMMARY.md) - Understand the improvements
-
-**Learn more:**
-- [README.md](README.md) - Section: "How to Use" → "Supervisor View"
-- [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) - Dashboard layout
-
-**Daily use:**
-- [QUICK-START.md](QUICK-START.md) - Quick monitoring tasks
+| ไฟล์ | รายละเอียด | จำนวนหน้า | เหมาะสำหรับ |
+|------|--------------|-------------|---------------|
+| **PROJECT-SUMMARY.md** | สรุปภาพรวมเชิงผู้บริหาร | ~40 | ผู้บริหาร, ผู้ถือหุ้น |
+| **DESIGN-DECISIONS.md** | เหตุผลและแนวคิดการออกแบบ | ~80 | ผู้จัดการผลิตภัณฑ์, ทีมออกแบบ |
+| **CHANGELOG.md** | ประวัติการเปลี่ยนแปลงระบบ | ~20 | ทีมพัฒนา |
 
 ---
 
-### 💼 **I'm a Manager/Stakeholder**
+### 🛠️ เอกสารทางเทคนิค (Technical Documentation)
 
-**Start here:**
-1. [PROJECT-SUMMARY.md](PROJECT-SUMMARY.md) - Business impact & ROI
-2. [README.md](README.md) - Complete overview
-
-**Understand decisions:**
-- [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) - Why we built it this way
-- [CHANGELOG.md](CHANGELOG.md) - What changed from old system
-
-**Present to others:**
-- [PROJECT-SUMMARY.md](PROJECT-SUMMARY.md) - Executive summary
-- [README.md](README.md) - Section: "Impact & Results"
+| ไฟล์ | รายละเอียด | จำนวนหน้า | เหมาะสำหรับ |
+|------|--------------|-------------|---------------|
+| **COMPONENTS.md** | เอกสาร API ของคอมโพเนนต์ | ~60 | นักพัฒนา, วิศวกร |
+| **Attributions.md** | เครดิตและสัญญาอนุญาตซอฟต์แวร์ | ~5 | ฝ่ายกฎหมาย, การปฏิบัติตามข้อกำหนด |
 
 ---
 
-### 🎨 **I'm a Designer**
+### 📂 ไฟล์ของโครงการ (Project Files)
 
-**Start here:**
-1. [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) - Design rationale
-2. [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) - Visual specs
-
-**Design system:**
-- [README.md](README.md) - Section: "Design System"
-- [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) - Colors, spacing, typography
-
-**UX research:**
-- [README.md](README.md) - Section: "The Old System"
-- [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) - User research findings
+| ไฟล์ | รายละเอียด | วัตถุประสงค์ |
+|------|--------------|---------------|
+| **.gitignore** | กฎการละเว้นไฟล์ใน Git | สำหรับควบคุมเวอร์ชัน |
+| **LICENSE** | ใบอนุญาต MIT License | ด้านกฎหมาย |
 
 ---
 
-### 👨‍💻 **I'm a Developer**
+## 🎯 การนำทางอย่างรวดเร็วตามบทบาท (Quick Navigation by Role)
 
-**Start here:**
-1. [INSTALLATION.md](INSTALLATION.md) - Setup & installation guide
-2. [COMPONENTS.md](COMPONENTS.md) - Component API documentation
-3. [README.md](README.md) - Section: "Technical Stack"
+### 👤 สำหรับ “พนักงานคอลเซ็นเตอร์” (Call Center Agent)
 
-**Setup:**
-- [INSTALLATION.md](INSTALLATION.md) - Prerequisites, troubleshooting
-- [README.md](README.md) - Section: "Installation"
+**เริ่มต้นที่:**
+- `USAGE-GUIDE.md` → ส่วน “Agent View”  
+- `QUICK-START.md` → สำหรับอ้างอิงระหว่างวัน
 
-**Implementation:**
-- [COMPONENTS.md](COMPONENTS.md) - Props, usage examples
-- [CHANGELOG.md](CHANGELOG.md) - Version history
+**ศึกษาเพิ่มเติม:**
+- `README.md` → ส่วน “How to Use → Agent View”  
+- `VISUAL-REFERENCE.md` → แผนผังและเลย์เอาต์
 
-**Design system:**
-- Source: `/styles/tokens.ts`
-- Types: `/types/index.ts`
+**ใช้งานประจำวัน:**
+- `QUICK-START.md` → รายการคีย์ลัดและภารกิจทั่วไป
 
 ---
 
-### 🎓 **I'm Training New Users**
+### 👔 สำหรับ “หัวหน้าทีม” (Team Supervisor)
 
-**Training materials:**
-1. [USAGE-GUIDE.md](USAGE-GUIDE.md) - Complete walkthrough
-2. [QUICK-START.md](QUICK-START.md) - Reference guide
-3. [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) - Visual aids
+**เริ่มต้นที่:**
+- `USAGE-GUIDE.md` → ส่วน “Supervisor View”  
+- `PROJECT-SUMMARY.md` → เข้าใจภาพรวมของการปรับปรุงระบบ
 
-**Training flow:**
-1. Show [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) - Layout overview
-2. Walk through [USAGE-GUIDE.md](USAGE-GUIDE.md) - Step-by-step
-3. Practice with [QUICK-START.md](QUICK-START.md) - Common tasks
-4. Share [QUICK-START.md](QUICK-START.md) - Keep for reference
+**ศึกษาเพิ่มเติม:**
+- `README.md` → ส่วน “How to Use → Supervisor View”  
+- `VISUAL-REFERENCE.md` → โครงสร้างแดชบอร์ด
 
----
-
-## 📖 Reading Order Recommendations
-
-### 🚀 Quick Start (15 minutes)
-
-```
-1. README.md (Overview section)           5 min
-2. USAGE-GUIDE.md (Your role section)    10 min
-Total: 15 minutes
-```
-
-### 📚 Complete Understanding (1-2 hours)
-
-```
-1. README.md (Full document)              20 min
-2. USAGE-GUIDE.md (Full document)         30 min
-3. PROJECT-SUMMARY.md (Skim)              15 min
-4. VISUAL-REFERENCE.md (Browse)           10 min
-Total: ~75 minutes
-```
-
-### 🎓 Deep Dive (3-4 hours)
-
-```
-1. README.md (Full)                       20 min
-2. PROJECT-SUMMARY.md (Full)              30 min
-3. DESIGN-DECISIONS.md (Full)             60 min
-4. USAGE-GUIDE.md (Full)                  30 min
-5. COMPONENTS.md (Full)                   40 min
-6. QUICK-START.md (Browse)                15 min
-7. VISUAL-REFERENCE.md (Full)             20 min
-Total: ~215 minutes (3.5 hours)
-```
+**ใช้งานประจำวัน:**
+- `QUICK-START.md` → งานตรวจสอบอย่างรวดเร็ว
 
 ---
 
-## 📝 Document Details
+### 💼 สำหรับ “ผู้บริหารหรือผู้ถือหุ้น” (Manager / Stakeholder)
 
-### README.md
-**Size:** ~1,100 lines  
-**Reading time:** 20-30 minutes  
-**Last updated:** October 16, 2025
+**เริ่มต้นที่:**
+- `PROJECT-SUMMARY.md` → ผลลัพธ์ทางธุรกิจและ ROI  
+- `README.md` → ภาพรวมระบบทั้งหมด
 
-**Sections:**
-- Overview & target users
-- Old system problems (detailed)
-- Customer requirements
-- Solutions implemented (7 major improvements)
-- Project structure
-- Getting started
-- How to use (comprehensive guide)
-- Key features
-- Design system
-- Impact & results
-- Technical stack
-- Documentation links
+**ทำความเข้าใจเพิ่มเติม:**
+- `DESIGN-DECISIONS.md` → เหตุผลการออกแบบเชิงกลยุทธ์  
+- `CHANGELOG.md` → การเปลี่ยนแปลงจากระบบเดิม
 
-**Best for:**
-- First-time readers
-- Complete project overview
-- Understanding the problem and solution
+**ใช้ในการนำเสนอ:**
+- `PROJECT-SUMMARY.md` → เอกสารผู้บริหาร
+- `README.md` → ส่วน “Impact & Results”
 
 ---
 
-### INSTALLATION.md
-**Size:** ~1,000 lines  
-**Reading time:** 30-40 minutes  
-**Last updated:** October 16, 2025
+### 🎨 สำหรับ “นักออกแบบ” (Designer)
 
-**Sections:**
-- Quick start (Figma Make & Local)
-- Prerequisites & version checking
-- Local development setup (4 steps)
-- Building for production
-- Docker setup (basic & compose)
-- Configuration (environment, TypeScript, VS Code)
-- Troubleshooting (10+ common issues)
-- FAQ (15+ questions)
+**เริ่มต้นที่:**
+- `DESIGN-DECISIONS.md` → เหตุผลและหลักการออกแบบ  
+- `VISUAL-REFERENCE.md` → มาตรฐานภาพและองค์ประกอบดีไซน์
 
-**Best for:**
-- Developers setting up project
-- DevOps and deployment
-- Troubleshooting installation
-- Docker containerization
+**ระบบดีไซน์ (Design System):**
+- `README.md` → ส่วน “Design System”  
+- `VISUAL-REFERENCE.md` → สี, ระยะห่าง, ตัวอักษร
+
+**งานวิจัย UX:**
+- `README.md` → ส่วน “The Old System”  
+- `DESIGN-DECISIONS.md` → ผลลัพธ์จากการวิจัยผู้ใช้
 
 ---
 
-### USAGE-GUIDE.md
-**Size:** ~1,200 lines  
-**Reading time:** 30-40 minutes  
-**Last updated:** October 16, 2025
+### 👨‍💻 สำหรับ “นักพัฒนา” (Developer)
 
-**Sections:**
-- Quick start
-- Agent view complete guide
-- Supervisor view complete guide
-- Daily workflows
-- Visual walkthroughs
-- Keyboard shortcuts
-- Common tasks
-- Troubleshooting
+**เริ่มต้นที่:**
+- `INSTALLATION.md` → ขั้นตอนการติดตั้งระบบ  
+- `COMPONENTS.md` → เอกสารคอมโพเนนต์และ API
 
-**Best for:**
-- New users learning the system
-- Training sessions
-- Step-by-step instructions
-- Visual learners
+**การตั้งค่า:**
+- `INSTALLATION.md` → ขั้นตอนเตรียมสภาพแวดล้อม  
+- `README.md` → ส่วน “Installation”
+
+**การพัฒนาและการใช้งาน:**
+- `COMPONENTS.md` → การใช้งาน Props และตัวอย่างโค้ด  
+- `CHANGELOG.md` → ติดตามประวัติการเปลี่ยนแปลง
+
+**ระบบดีไซน์และประเภทข้อมูล:**
+- โครงสร้างสี: `/styles/tokens.ts`  
+- ประเภทข้อมูล: `/types/index.ts`
 
 ---
 
-### QUICK-START.md
-**Size:** ~900 lines  
-**Reading time:** 20-25 minutes  
-**Last updated:** October 16, 2025
+### 🎓 สำหรับ “ผู้ฝึกอบรม” (Training Instructors)
 
-**Sections:**
-- Agent guide (morning routine, workflows)
-- Supervisor guide (monitoring, actions)
-- Keyboard shortcuts master list
-- Daily checklists
-- Common Q&A
-- Tips & tricks
+**สื่อการฝึกอบรม:**
+- `USAGE-GUIDE.md` → คู่มือการใช้งานเต็มรูปแบบ  
+- `QUICK-START.md` → เอกสารสรุปย่อสำหรับผู้เรียน  
+- `VISUAL-REFERENCE.md` → เอกสารภาพประกอบ
 
-**Best for:**
-- Daily reference
-- Quick task lookup
-- Keyboard shortcut reference
-- Common workflows
+**ลำดับการฝึกอบรม:**
+1. แสดง `VISUAL-REFERENCE.md` → ภาพรวมระบบ  
+2. อธิบาย `USAGE-GUIDE.md` → วิธีใช้งานทีละขั้นตอน  
+3. ฝึกปฏิบัติด้วย `QUICK-START.md`  
+4. แจก `QUICK-START.md` เพื่ออ้างอิงภายหลัง
 
 ---
 
-### PROJECT-SUMMARY.md
-**Size:** ~800 lines  
-**Reading time:** 15-20 minutes  
-**Last updated:** October 16, 2025
+## 📖 ลำดับการอ่านที่แนะนำ (Reading Order Recommendations)
 
-**Sections:**
-- Executive summary
-- Old system problems (table format)
-- New system solutions
-- Measured results
-- User testimonials
-- Business impact ($500k/year savings)
-- ROI calculations
-- Success metrics
+### 🚀 สำหรับการเริ่มต้นอย่างรวดเร็ว (15 นาที)
 
-**Best for:**
-- Management presentations
-- Stakeholder briefings
-- Business case documentation
-- ROI discussions
+1. `README.md` (ส่วน Overview) → 5 นาที  
+2. `USAGE-GUIDE.md` (ส่วนของบทบาทผู้ใช้) → 10 นาที  
+**รวมเวลา:** 15 นาที
 
 ---
 
-### DESIGN-DECISIONS.md
-**Size:** ~2,000 lines  
-**Reading time:** 60-80 minutes  
-**Last updated:** October 16, 2025
+### 📚 สำหรับความเข้าใจครบถ้วน (1–2 ชั่วโมง)
 
-**Sections:**
-- 8 major design decisions
-- UX principles (Fitts's Law, Hick's Law, etc.)
-- Psychological research
-- Accessibility compliance
-- Visual design rationale
-- Layout strategy
-- Typography decisions
-- Code examples
-
-**Best for:**
-- Understanding why decisions were made
-- UX/UI designers
-- Product managers
-- Design reviews
+1. `README.md` (ฉบับเต็ม) → 20 นาที  
+2. `USAGE-GUIDE.md` (ฉบับเต็ม) → 30 นาที  
+3. `PROJECT-SUMMARY.md` (อ่านผ่าน) → 15 นาที  
+4. `VISUAL-REFERENCE.md` (ดูภาพรวม) → 10 นาที  
+**รวมเวลา:** ~75 นาที
 
 ---
 
-### COMPONENTS.md
-**Size:** ~1,500 lines  
-**Reading time:** 40-50 minutes  
-**Last updated:** October 16, 2025
+### 🎓 สำหรับการศึกษาลึก (3–4 ชั่วโมง)
 
-**Sections:**
-- 13 component specifications
-- Props & interfaces
-- Usage examples
-- Visual states
-- Behavior documentation
-- Design patterns
-- Best practices
-
-**Best for:**
-- Developers implementing features
-- Component maintenance
-- Technical documentation
-- API reference
+1. `README.md` → 20 นาที  
+2. `PROJECT-SUMMARY.md` → 30 นาที  
+3. `DESIGN-DECISIONS.md` → 60 นาที  
+4. `USAGE-GUIDE.md` → 30 นาที  
+5. `COMPONENTS.md` → 40 นาที  
+6. `QUICK-START.md` → 15 นาที  
+7. `VISUAL-REFERENCE.md` → 20 นาที  
+**รวมเวลา:** ~3.5 ชั่วโมง
 
 ---
 
-### VISUAL-REFERENCE.md
-**Size:** ~700 lines  
-**Reading time:** 15-20 minutes  
-**Last updated:** October 16, 2025
+## 📝 รายละเอียดเอกสาร (Document Details)
 
-**Sections:**
-- Layout diagrams (ASCII art)
-- Color reference
-- Spacing reference
-- Typography reference
-- Interactive element states
-- Component dimensions
-- Responsive breakpoints
-
-**Best for:**
-- Visual overview
-- Design reference
-- Layout understanding
-- Quick visual lookup
+แต่ละเอกสารถูกจัดทำตามมาตรฐานเอกสารธุรกิจ โดยระบุโครงสร้าง, ระยะเวลาอ่าน, และกลุ่มผู้อ่านที่เหมาะสมอย่างชัดเจน  
+(เช่น README สำหรับภาพรวม, DESIGN-DECISIONS สำหรับทีมออกแบบ, และ PROJECT-SUMMARY สำหรับผู้บริหาร)
 
 ---
 
-### CHANGELOG.md
-**Size:** ~400 lines  
-**Reading time:** 10-15 minutes  
-**Last updated:** October 16, 2025
+## 🔗 ลิงก์ภายนอก (External Links)
 
-**Sections:**
-- Version 2.0.0 (current redesign)
-- Version 1.0.0 (old system)
-- Detailed change list
-- Impact measurements
-- Future roadmap
+- **โค้ดต้นฉบับ:** `/components/`  
+- **ไฟล์สไตล์:** `/styles/tokens.ts`, `/styles/globals.css`  
+- **ประเภทข้อมูล:** `/types/index.ts`  
 
-**Best for:**
-- Version history
-- What changed
-- Development tracking
-- Future planning
+**เทคโนโลยีที่ใช้:**  
+- Figma Make (ออกแบบต้นแบบ)  
+- React v18+  
+- TypeScript (ตรวจสอบประเภทข้อมูล)  
+- Tailwind CSS v4.0  
+- Shadcn/UI (ชุดคอมโพเนนต์ UI)
 
 ---
 
-## 🔗 External Links
+## 📊 สถิติของเอกสาร (Documentation Statistics)
 
-### Project Files
+| หมวด | ร้อยละโดยประมาณ |
+|-------|------------------|
+| คู่มือผู้ใช้ (User Guides) | 35% |
+| เอกสารเทคนิค (Technical) | 30% |
+| เอกสารธุรกิจ (Business) | 20% |
+| เอกสารอ้างอิง (Reference) | 15% |
 
-- **Source Code:** `/components/` folder
-- **Styles:** `/styles/tokens.ts` and `/styles/globals.css`
-- **Types:** `/types/index.ts`
-
-### Related Tools
-
-- **Figma Make:** This project was built using Figma Make
-- **React:** Version 18+
-- **TypeScript:** For type safety
-- **Tailwind CSS:** Version 4.0
-- **Shadcn/UI:** Component library
-
----
-
-## 📊 Documentation Statistics
-
-```
-Total Files:        11
-Total Lines:        ~10,500
-Total Pages:        ~350 (estimated)
-Total Words:        ~70,000
-
-By Category:
-- User Guides:      35% (USAGE-GUIDE, QUICK-START, VISUAL-REFERENCE)
-- Technical:        30% (INSTALLATION, COMPONENTS, README)
-- Business:         20% (PROJECT-SUMMARY, DESIGN-DECISIONS)
-- Reference:        15% (CHANGELOG, DOCUMENTATION-INDEX)
-
-Reading Time:
-- Quick overview:   15 minutes
-- Complete guide:   3-4 hours
-- Deep dive:        8-10 hours
-- Full mastery:     12-15 hours
-```
+**รวมทั้งหมด:**  
+- จำนวนไฟล์: 11 ไฟล์  
+- จำนวนบรรทัด: ~10,500  
+- จำนวนหน้าโดยประมาณ: ~350 หน้า  
+- จำนวนคำ: ~70,000 คำ  
+- เวลาอ่านเฉลี่ย:  
+  - อ่านเร็ว: 15 นาที  
+  - เข้าใจครบ: 3–4 ชม.  
+  - ศึกษาลึก: 8–10 ชม.  
+  - เชี่ยวชาญเต็มรูปแบบ: 12–15 ชม.
 
 ---
 
-## 🎯 Common Questions
+## 🎯 คำถามที่พบบ่อย (Common Questions)
 
-**Q: Which document should I read first?**  
-A: Start with [README.md](README.md) for overview, then go to your role-specific guide.
-
-**Q: Where's the step-by-step guide?**  
-A: [USAGE-GUIDE.md](USAGE-GUIDE.md) has detailed walkthroughs.
-
-**Q: Where are the keyboard shortcuts?**  
-A: [QUICK-START.md](QUICK-START.md) has the complete list.
-
-**Q: How do I present this to management?**  
-A: Use [PROJECT-SUMMARY.md](PROJECT-SUMMARY.md) for executive summary.
-
-**Q: Where's the technical documentation?**  
-A: [COMPONENTS.md](COMPONENTS.md) for developers.
-
-**Q: Where are the visual layouts?**  
-A: [VISUAL-REFERENCE.md](VISUAL-REFERENCE.md) has all diagrams.
-
-**Q: What changed from the old system?**  
-A: [CHANGELOG.md](CHANGELOG.md) and [README.md](README.md) "Old System" section.
-
-**Q: Why were these decisions made?**  
-A: [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) explains all rationale.
+| คำถาม | คำตอบ |
+|--------|--------|
+| ควรอ่านเอกสารใดก่อน? | เริ่มจาก `README.md` เพื่อเข้าใจภาพรวมระบบ |
+| ต้องการขั้นตอนใช้งานแบบละเอียดอยู่ที่ไหน? | `USAGE-GUIDE.md` มีคำอธิบายทีละขั้นตอน |
+| คีย์ลัดทั้งหมดอยู่ที่ไหน? | อยู่ใน `QUICK-START.md` |
+| ถ้าต้องนำเสนอผู้บริหาร ควรใช้เอกสารใด? | `PROJECT-SUMMARY.md` สำหรับสรุปผู้บริหาร |
+| เอกสารเทคนิคอยู่ที่ไหน? | `COMPONENTS.md` สำหรับนักพัฒนา |
+| แผนผังเลย์เอาต์อยู่ที่ไหน? | `VISUAL-REFERENCE.md` |
+| ต้องการทราบสิ่งที่เปลี่ยนจากระบบเดิม? | `CHANGELOG.md` และส่วน “Old System” ใน `README.md` |
+| เหตุผลที่ออกแบบระบบแบบนี้คืออะไร? | ดูได้ใน `DESIGN-DECISIONS.md` |
 
 ---
 
-## 📞 Support
+## 📞 การขอความช่วยเหลือ (Support)
 
-Can't find what you're looking for?
-
-1. Check this index again (you might have missed it)
-2. Use browser search (Ctrl+F) within documents
-3. Ask your supervisor or IT support
-4. Contact the development team
-
----
-
-## ✅ Documentation Checklist
-
-Use this when onboarding or training:
-
-- [ ] Read README.md overview
-- [ ] Identify your role (Agent/Supervisor/Manager/Developer)
-- [ ] Read role-specific guide
-- [ ] Browse VISUAL-REFERENCE.md
-- [ ] Bookmark QUICK-START.md for daily use
-- [ ] Try the application hands-on
-- [ ] Practice common tasks
-- [ ] Learn keyboard shortcuts
-- [ ] Share feedback or questions
+หากไม่พบข้อมูลที่ต้องการ:
+1. ตรวจสอบในเอกสารนี้อีกครั้ง  
+2. ใช้การค้นหาในเอกสาร (Ctrl + F)  
+3. ติดต่อหัวหน้าทีม หรือฝ่าย IT  
+4. ติดต่อทีมพัฒนาโดยตรง
 
 ---
 
-**Last updated: October 16, 2025**
+## ✅ รายการตรวจสอบการเตรียมเอกสาร (Documentation Checklist)
 
-*All documentation is up to date and ready for use!*
+- [x] อ่าน `README.md` เพื่อเข้าใจภาพรวม  
+- [x] ระบุบทบาทของผู้ใช้งาน (Agent / Supervisor / Manager / Developer)  
+- [x] อ่านคู่มือเฉพาะบทบาท  
+- [x] เปิดดู `VISUAL-REFERENCE.md` เพื่อเข้าใจภาพรวมเชิงภาพ  
+- [x] บุ๊กมาร์ก `QUICK-START.md` สำหรับใช้งานประจำวัน  
+- [x] ทดลองใช้ระบบจริง  
+- [x] ฝึกภารกิจทั่วไป  
+- [x] เรียนรู้คีย์ลัด  
+- [x] ส่งข้อเสนอแนะหรือคำถาม
+
+---
+
+_อัปเดตล่าสุด: 16 ตุลาคม 2025_  
+_จัดทำโดยทีมพัฒนา Agent Wallboard System_
