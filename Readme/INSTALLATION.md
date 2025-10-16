@@ -1,911 +1,263 @@
-# 🛠️ Installation & Setup Guide
+# 🛠️ คู่มือติดตั้งและตั้งค่า (Installation & Setup Guide)
 
-> **Complete installation guide for the Agent Wallboard system**
-
----
-
-## 📋 Table of Contents
-
-- [Quick Start](#quick-start)
-- [Prerequisites](#prerequisites)
-- [Local Development Setup](#local-development-setup)
-- [Building for Production](#building-for-production)
-- [Docker Setup](#docker-setup)
-- [Configuration](#configuration)
-- [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
+> **เอกสารแนะนำการติดตั้งระบบ Agent Wallboard ฉบับสมบูรณ์**
 
 ---
 
-## 🚀 Quick Start
+## 📋 สารบัญ
 
-### Option 1: Figma Make (No Installation)
-
-This project is built with **Figma Make**:
-
-✅ **No installation required**  
-✅ **No build step needed**  
-✅ **Just open and use**
-
-Simply load the application in Figma Make and it's ready to go!
+- [เริ่มต้นอย่างรวดเร็ว (Quick Start)](#เริ่มต้นอย่างรวดเร็ว-quick-start)
+- [ความต้องการเบื้องต้น (Prerequisites)](#ความต้องการเบื้องต้น-prerequisites)
+- [การติดตั้งสำหรับการพัฒนา (Local Development Setup)](#การติดตั้งสำหรับการพัฒนา-local-development-setup)
+- [การสร้างสำหรับใช้งานจริง (Building for Production)](#การสร้างสำหรับใช้งานจริง-building-for-production)
+- [การติดตั้งด้วย Docker](#การติดตั้งด้วย-docker)
+- [การตั้งค่า (Configuration)](#การตั้งค่า-configuration)
+- [การแก้ไขปัญหา (Troubleshooting)](#การแก้ไขปัญหา-troubleshooting)
+- [คำถามที่พบบ่อย (FAQ)](#คำถามที่พบบ่อย-faq)
 
 ---
 
-### Option 2: Local Development (5 Minutes)
+## 🚀 เริ่มต้นอย่างรวดเร็ว (Quick Start)
+
+### ตัวเลือกที่ 1: Figma Make (ไม่ต้องติดตั้ง)
+
+ระบบนี้สามารถใช้งานผ่าน **Figma Make** ได้ทันที  
+✅ ไม่ต้องติดตั้งโปรแกรม  
+✅ ไม่ต้อง build  
+✅ เปิดใช้งานได้ทันทีจาก Figma Make
+
+---
+
+### ตัวเลือกที่ 2: การติดตั้งในเครื่อง (ใช้เวลา 5 นาที)
 
 ```bash
-# 1. Clone repository
+# 1. โคลนโปรเจ็กต์
 git clone https://github.com/your-username/agent-wallboard.git
 cd agent-wallboard
 
-# 2. Install dependencies
+# 2. ติดตั้ง dependencies
 npm install
 
-# 3. Start development server
+# 3. รันเซิร์ฟเวอร์สำหรับพัฒนา
 npm run dev
 
-# 4. Open browser
-# Navigate to http://localhost:5173
+# 4. เปิดเบราว์เซอร์
+# ไปที่ http://localhost:5173
 ```
 
-✅ **Done!** Application is now running locally.
+✅ **เสร็จสิ้น!** ระบบพร้อมใช้งานในเครื่องของคุณแล้ว
 
 ---
 
-## ✅ Prerequisites
+## ✅ ความต้องการเบื้องต้น (Prerequisites)
 
-### Required Software
-
-| Software | Minimum Version | Recommended | Download |
-|----------|----------------|-------------|----------|
+| ซอฟต์แวร์ | เวอร์ชันขั้นต่ำ | แนะนำ | ดาวน์โหลด |
+|-------------|----------------|----------|--------------|
 | **Node.js** | 18.0.0 | 20.x LTS | [nodejs.org](https://nodejs.org) |
-| **npm** | 9.0.0 | Latest | Comes with Node.js |
-| **Git** | 2.0.0 | Latest | [git-scm.com](https://git-scm.com) |
+| **npm** | 9.0.0 | ล่าสุด | มาพร้อม Node.js |
+| **Git** | 2.0.0 | ล่าสุด | [git-scm.com](https://git-scm.com) |
 
-### Check Your Versions
+**ตรวจสอบเวอร์ชัน:**
 
 ```bash
-# Check Node.js version
 node --version
-# Expected: v18.x.x or higher
-
-# Check npm version
 npm --version
-# Expected: 9.x.x or higher
-
-# Check Git version
 git --version
-# Expected: 2.x.x or higher
 ```
 
-**Example output:**
+**ผลลัพธ์ตัวอย่าง:**
+
 ```
-$ node --version
 v20.10.0
-
-$ npm --version
-10.2.3
-
-$ git --version
+npm 10.2.3
 git version 2.42.0
 ```
 
-✅ **All good!** You're ready to proceed.
+✅ พร้อมสำหรับการติดตั้งต่อ
 
 ---
 
-## 💻 Local Development Setup
+## 💻 การติดตั้งสำหรับการพัฒนา (Local Development Setup)
 
-### Step 1: Clone the Repository
+### ขั้นตอนที่ 1: โคลน Repository
 
-**Using HTTPS:**
 ```bash
 git clone https://github.com/your-username/agent-wallboard.git
 cd agent-wallboard
 ```
 
-**Using SSH:**
-```bash
-git clone git@github.com:your-username/agent-wallboard.git
-cd agent-wallboard
-```
-
-**Verify you're in the right directory:**
+ตรวจสอบว่าอยู่ในโฟลเดอร์ที่ถูกต้อง:  
 ```bash
 ls -la
-# You should see: App.tsx, components/, styles/, etc.
+# จะเห็น App.tsx, components/, styles/, เป็นต้น
 ```
 
----
-
-### Step 2: Install Dependencies
-
-#### Using npm (Recommended)
+### ขั้นตอนที่ 2: ติดตั้ง Dependencies
 
 ```bash
 npm install
 ```
 
-This installs all dependencies from `package.json`:
-- React 18+
-- TypeScript
-- Tailwind CSS v4.0
-- Lucide React (icons)
-- Sonner (toast notifications)
-- Shadcn/UI components (40+)
+ระบบจะติดตั้งแพ็กเกจสำคัญ เช่น React 18+, TypeScript, Tailwind CSS v4, Lucide React, Shadcn/UI
 
-**Expected output:**
-```
-added 1234 packages in 30s
-
-123 packages are looking for funding
-  run `npm fund` for details
-```
-
-#### Using yarn (Alternative)
-
-```bash
-yarn install
-```
-
-#### Using pnpm (Alternative)
-
-```bash
-pnpm install
-```
-
----
-
-### Step 3: Start Development Server
+### ขั้นตอนที่ 3: เริ่มเซิร์ฟเวอร์สำหรับพัฒนา
 
 ```bash
 npm run dev
 ```
 
-**Expected output:**
+**ผลลัพธ์ที่คาดหวัง:**  
 ```
-  VITE v5.0.0  ready in 500 ms
-
-  ➜  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-  ➜  press h + enter to show help
+VITE v5.0.0 ready in 500 ms
+Local: http://localhost:5173/
 ```
 
-The server will:
-- ✅ Start at `http://localhost:5173`
-- ✅ Hot reload on file changes
-- ✅ Show TypeScript errors in console
-- ✅ Open automatically in browser (optional)
+เมื่อเปิดเบราว์เซอร์ คุณจะเห็นหน้าหลักของระบบ Agent Wallboard
 
 ---
 
-### Step 4: Verify Installation
-
-**Open your browser:**
-```
-http://localhost:5173
-```
-
-**You should see:**
-1. ✅ View switcher at top (Agent View / Supervisor View)
-2. ✅ Agent Dashboard (default view)
-3. ✅ No console errors
-4. ✅ Styles loading correctly
-
-**Test basic functionality:**
-- Click "Supervisor View" - should switch views
-- Click status dropdown - should show options
-- Check console (F12) - should have no errors
-
-✅ **Success!** Your local setup is complete.
-
----
-
-## 🏗️ Building for Production
-
-### Create Production Build
+## 🏗️ การสร้างสำหรับใช้งานจริง (Building for Production)
 
 ```bash
 npm run build
 ```
 
-This command:
-1. Runs TypeScript type checking
-2. Optimizes all code
-3. Minifies CSS and JavaScript
-4. Generates source maps
-5. Creates `/dist` directory
+ระบบจะ:
+1. ตรวจสอบ TypeScript
+2. ย่อไฟล์และสร้าง build ที่พร้อมใช้งาน
+3. สร้างโฟลเดอร์ `/dist`
 
-**Expected output:**
-```
-vite v5.0.0 building for production...
-✓ 1234 modules transformed.
-dist/index.html                   1.23 kB │ gzip:  0.45 kB
-dist/assets/index-abc123.css     12.34 kB │ gzip:  3.45 kB
-dist/assets/index-def456.js     234.56 kB │ gzip: 67.89 kB
-✓ built in 5.67s
-```
-
-**Output directory structure:**
+โครงสร้างผลลัพธ์:
 ```
 dist/
-├── index.html           # Entry HTML file
+├── index.html
 ├── assets/
-│   ├── index-[hash].css  # Minified CSS
-│   └── index-[hash].js   # Minified JavaScript
-└── [other assets]
+│   ├── index-[hash].css
+│   └── index-[hash].js
 ```
 
----
-
-### Preview Production Build
+### ทดสอบ build
 
 ```bash
 npm run preview
 ```
 
-**Expected output:**
-```
-  ➜  Local:   http://localhost:4173/
-  ➜  Network: use --host to expose
-```
-
-Test the production build at `http://localhost:4173`
-
-**Verify:**
-- ✅ All features working
-- ✅ Performance is good
-- ✅ No console errors
-- ✅ Styles are correct
+เข้าใช้งานผ่าน `http://localhost:4173`
 
 ---
 
-### Deploy Production Build
+## 🐳 การติดตั้งด้วย Docker
 
-**Option 1: Static Hosting (Vercel, Netlify, etc.)**
-
-```bash
-# Build first
-npm run build
-
-# Deploy /dist folder to your hosting service
-```
-
-**Option 2: Your Own Server**
-
-```bash
-# Copy /dist folder to your web server
-scp -r dist/* user@server:/var/www/agent-wallboard/
-
-# Or use rsync
-rsync -avz dist/ user@server:/var/www/agent-wallboard/
-```
-
-**Option 3: Docker (see below)**
-
----
-
-## 🐳 Docker Setup
-
-### Basic Docker Setup
-
-**Create `Dockerfile`:**
+### ตัวอย่าง Dockerfile
 
 ```dockerfile
-# Use Node.js 20 Alpine for smaller image size
 FROM node:20-alpine
-
-# Set working directory
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
-
-# Install dependencies
 RUN npm ci --only=production
-
-# Copy application files
 COPY . .
-
-# Build the application
 RUN npm run build
-
-# Expose port
 EXPOSE 5173
-
-# Start the application
 CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0"]
 ```
 
-**Build Docker image:**
+สร้างและรันคอนเทนเนอร์:
 
 ```bash
 docker build -t agent-wallboard:latest .
+docker run -d -p 5173:5173 agent-wallboard:latest
 ```
 
-**Run Docker container:**
-
-```bash
-docker run -d -p 5173:5173 --name agent-wallboard agent-wallboard:latest
-```
-
-**Access the application:**
-```
-http://localhost:5173
-```
+เข้าใช้งานที่ `http://localhost:5173`
 
 ---
 
-### Docker Compose Setup
+## ⚙️ การตั้งค่า (Configuration)
 
-**Create `docker-compose.yml`:**
-
-```yaml
-version: '3.8'
-
-services:
-  agent-wallboard:
-    build: .
-    container_name: agent-wallboard
-    ports:
-      - "5173:5173"
-    environment:
-      - NODE_ENV=production
-    restart: unless-stopped
-```
-
-**Start with Docker Compose:**
+สร้างไฟล์ `.env`:
 
 ```bash
-# Start in background
-docker-compose up -d
-
-# View logs
-docker-compose logs -f
-
-# Stop
-docker-compose down
-```
-
----
-
-### Development with Docker
-
-**Create `Dockerfile.dev`:**
-
-```dockerfile
-FROM node:20-alpine
-
-WORKDIR /app
-
-COPY package*.json ./
-RUN npm install
-
-COPY . .
-
-EXPOSE 5173
-
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
-```
-
-**Create `docker-compose.dev.yml`:**
-
-```yaml
-version: '3.8'
-
-services:
-  agent-wallboard-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    container_name: agent-wallboard-dev
-    ports:
-      - "5173:5173"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    environment:
-      - NODE_ENV=development
-```
-
-**Start development environment:**
-
-```bash
-docker-compose -f docker-compose.dev.yml up
-```
-
----
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-Create `.env` file in project root:
-
-```bash
-# .env
 VITE_APP_NAME=Agent Wallboard
 VITE_APP_VERSION=2.0.0
-
-# API Configuration (if needed)
 VITE_API_URL=http://localhost:3000/api
 VITE_WS_URL=ws://localhost:3000
-
-# Feature Flags
 VITE_ENABLE_REAL_TIME=true
 VITE_ENABLE_NOTIFICATIONS=true
 ```
 
-**Access in code:**
-
+เข้าถึงค่าจากโค้ด:
 ```typescript
 const apiUrl = import.meta.env.VITE_API_URL;
-const appName = import.meta.env.VITE_APP_NAME;
 ```
 
 ---
 
-### Tailwind Configuration
+## 🔧 การแก้ไขปัญหา (Troubleshooting)
 
-**File:** `tailwind.config.js` (if needed)
+### ❗ npm install ไม่สำเร็จ
 
-```javascript
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      // Custom theme extensions here
-    },
-  },
-  plugins: [],
-}
-```
-
-**Note:** This project uses Tailwind v4.0 with `@theme inline` in `globals.css`, so most configuration is in CSS.
-
----
-
-### TypeScript Configuration
-
-**File:** `tsconfig.json`
-
-```json
-{
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src", "components", "types"],
-  "references": [{ "path": "./tsconfig.node.json" }]
-}
-```
-
----
-
-### VS Code Configuration
-
-**Create `.vscode/settings.json`:**
-
-```json
-{
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-  "files.associations": {
-    "*.css": "tailwindcss"
-  }
-}
-```
-
-**Create `.vscode/extensions.json`:**
-
-```json
-{
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "ms-vscode.vscode-typescript-next"
-  ]
-}
-```
-
----
-
-## 🔧 Troubleshooting
-
-### Problem: npm install fails
-
-**Error:**
-```
-npm ERR! code ERESOLVE
-npm ERR! ERESOLVE unable to resolve dependency tree
-```
-
-**Solution:**
+**วิธีแก้ไข:**
 ```bash
-# Clear npm cache
 npm cache clean --force
-
-# Delete node_modules and lock file
 rm -rf node_modules package-lock.json
-
-# Reinstall with legacy peer deps
 npm install --legacy-peer-deps
-
-# Or use force
-npm install --force
 ```
 
 ---
 
-### Problem: Port 5173 already in use
+### ❗ พอร์ต 5173 ถูกใช้งานแล้ว
 
-**Error:**
-```
-Error: listen EADDRINUSE: address already in use :::5173
-```
-
-**Solution 1 - Kill the process:**
-
-**On macOS/Linux:**
+**ตรวจสอบและปิดพอร์ต:**
 ```bash
-# Find process using port 5173
-lsof -ti:5173
-
-# Kill the process
-kill -9 $(lsof -ti:5173)
-
-# Or in one line
 lsof -ti:5173 | xargs kill -9
-```
-
-**On Windows:**
-```cmd
-# Find process
-netstat -ano | findstr :5173
-
-# Kill process (replace PID with actual number)
-taskkill /PID <PID> /F
-```
-
-**Solution 2 - Use different port:**
-```bash
+# หรือเปลี่ยนพอร์ต
 npm run dev -- --port 3000
 ```
 
 ---
 
-### Problem: TypeScript errors
+### ❗ Tailwind CSS ไม่ทำงาน
 
-**Error:**
-```
-Error: Cannot find module './components/...'
-```
-
-**Solution:**
-
-1. **Restart TypeScript server:**
-   - VS Code: Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac)
-   - Type: "TypeScript: Restart TS Server"
-   - Press Enter
-
-2. **Check import paths:**
-   ```typescript
-   // ✅ Correct (relative path)
-   import { Button } from './components/ui/button'
-   
-   // ❌ Incorrect (no leading ./)
-   import { Button } from 'components/ui/button'
-   ```
-
-3. **Reinstall dependencies:**
-   ```bash
-   rm -rf node_modules package-lock.json
-   npm install
-   ```
+1. ตรวจสอบว่าได้ import `globals.css`
+2. ตรวจสอบ path ใน `tailwind.config.js`
+3. รีสตาร์ทเซิร์ฟเวอร์ด้วย `npm run dev`
 
 ---
 
-### Problem: Tailwind classes not working
+### ❗ Build ล้มเหลว
 
-**Error:**
-```
-Classes not applying or appearing as plain text
-```
-
-**Solution:**
-
-1. **Check globals.css is imported:**
-   ```typescript
-   // In App.tsx or main.tsx
-   import './styles/globals.css'
-   ```
-
-2. **Verify Tailwind configuration:**
-   - Check `@tailwind` directives in `globals.css`
-   - Ensure content paths are correct
-
-3. **Restart dev server:**
-   ```bash
-   # Stop server (Ctrl+C)
-   # Start again
-   npm run dev
-   ```
-
-4. **Clear Tailwind cache:**
-   ```bash
-   rm -rf node_modules/.cache
-   npm run dev
-   ```
-
----
-
-### Problem: Hot reload not working
-
-**Error:**
-```
-Changes not reflecting in browser
-```
-
-**Solution:**
-
-1. **Check if server is running:**
-   ```bash
-   # Should see "VITE ... ready"
-   npm run dev
-   ```
-
-2. **Hard refresh browser:**
-   - Chrome/Firefox: `Ctrl+Shift+R` (or `Cmd+Shift+R` on Mac)
-   - Safari: `Cmd+Option+R`
-
-3. **Clear browser cache:**
-   - Open DevTools (F12)
-   - Right-click refresh button
-   - Select "Empty Cache and Hard Reload"
-
-4. **Restart dev server:**
-   ```bash
-   # Stop with Ctrl+C
-   # Start again
-   npm run dev
-   ```
-
----
-
-### Problem: Build fails
-
-**Error:**
-```
-Build failed with errors
-```
-
-**Solution:**
-
-1. **Check for TypeScript errors:**
+1. ตรวจสอบ error จาก TypeScript:  
    ```bash
    npm run type-check
    ```
-
-2. **Fix all errors shown**
-
-3. **Try building again:**
-   ```bash
-   npm run build
-   ```
-
-4. **If still failing, check:**
-   - Import paths are correct
-   - No circular dependencies
-   - All files are saved
+2. แก้ไขและรันใหม่ `npm run build`
 
 ---
 
-### Problem: Module not found errors
+## ❓ คำถามที่พบบ่อย (FAQ)
 
-**Error:**
-```
-Module not found: Can't resolve 'sonner@2.0.3'
-```
+**ถาม:** ต้องติดตั้งโปรแกรมอะไรบ้าง?  
+**ตอบ:** หากใช้ผ่าน Figma Make ไม่ต้องติดตั้ง แต่ถ้าพัฒนาในเครื่องต้องมี Node.js 18+
 
-**Solution:**
+**ถาม:** ใช้ Node.js 16 ได้ไหม?  
+**ตอบ:** ไม่ได้ ต้องอัปเดตเป็น Node.js 18 ขึ้นไป
 
-For specific version imports (like sonner):
-```typescript
-// ✅ Correct
-import { toast } from 'sonner@2.0.3'
+**ถาม:** ใช้งานบน Windows ได้หรือไม่?  
+**ตอบ:** ได้ รองรับ Windows 10/11, macOS และ Linux
 
-// For other libraries without version:
-import { Button } from './components/ui/button'
-```
+**ถาม:** ต้องการ deploy ระบบอย่างไร?  
+**ตอบ:** ใช้ `npm run build` แล้วนำโฟลเดอร์ `/dist` ไปเผยแพร่บน Vercel, Netlify หรือเซิร์ฟเวอร์ของคุณ
 
 ---
 
-### Problem: Permission denied errors
+## 📚 แหล่งข้อมูลเพิ่มเติม
 
-**Error (macOS/Linux):**
-```
-EACCES: permission denied
-```
-
-**Solution:**
-```bash
-# Don't use sudo with npm!
-# Instead, fix npm permissions:
-
-# Create directory for global packages
-mkdir ~/.npm-global
-
-# Configure npm to use new directory
-npm config set prefix '~/.npm-global'
-
-# Add to PATH (add to ~/.profile or ~/.bashrc)
-export PATH=~/.npm-global/bin:$PATH
-
-# Reload profile
-source ~/.profile
-
-# Now install without sudo
-npm install
-```
+- [README.md](README.md) — ภาพรวมโครงการ  
+- [USAGE-GUIDE.md](USAGE-GUIDE.md) — คู่มือการใช้งาน  
+- [COMPONENTS.md](COMPONENTS.md) — เอกสาร API ของคอมโพเนนต์  
+- [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) — เหตุผลการออกแบบ  
 
 ---
 
-## ❓ FAQ
-
-### Q: Do I need to install anything to use this app?
-
-**A:** No! If using Figma Make, just open the app. For local development, you need Node.js 18+.
-
----
-
-### Q: What's the difference between npm, yarn, and pnpm?
-
-**A:** They're all package managers:
-- **npm**: Default, comes with Node.js
-- **yarn**: Alternative, faster caching
-- **pnpm**: Alternative, saves disk space
-
-**Recommendation:** Use **npm** (it's already installed with Node.js)
-
----
-
-### Q: Can I use Node.js 16 or 17?
-
-**A:** No, minimum is Node.js 18. Update with:
-```bash
-# Using nvm (recommended)
-nvm install 20
-nvm use 20
-
-# Or download from nodejs.org
-```
-
----
-
-### Q: How do I update dependencies?
-
-**A:**
-```bash
-# Check for updates
-npm outdated
-
-# Update all dependencies
-npm update
-
-# Update specific package
-npm update react
-
-# Update to latest (major versions)
-npm install react@latest
-```
-
----
-
-### Q: How much disk space is needed?
-
-**A:**
-- Repository: ~5 MB
-- node_modules: ~300 MB
-- Build output: ~2 MB
-
-**Total:** ~310 MB
-
----
-
-### Q: Can I use this on Windows?
-
-**A:** Yes! Works on:
-- ✅ Windows 10/11
-- ✅ macOS 10.15+
-- ✅ Linux (Ubuntu, Debian, etc.)
-
----
-
-### Q: How do I deploy to production?
-
-**A:** See [Deployment Guide](#deploy-production-build) above. Popular options:
-- Vercel (easiest)
-- Netlify
-- Your own server
-- Docker container
-
----
-
-### Q: Where are the API endpoints?
-
-**A:** This is a frontend-only application. For backend integration:
-1. Set up your API server
-2. Configure in `.env` file
-3. Use `fetch()` or libraries like Axios
-4. See [Configuration](#environment-variables) section
-
----
-
-### Q: Can I customize the design?
-
-**A:** Yes! Edit:
-- **Colors**: `/styles/tokens.ts`
-- **Spacing**: `/styles/tokens.ts`
-- **Typography**: `/styles/tokens.ts`
-- **Components**: `/components/` files
-
----
-
-### Q: How do I contribute?
-
-**A:**
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open Pull Request
-
----
-
-## 📚 Additional Resources
-
-- **[README.md](README.md)** - Main documentation
-- **[USAGE-GUIDE.md](USAGE-GUIDE.md)** - How to use the app
-- **[COMPONENTS.md](COMPONENTS.md)** - Component documentation
-- **[DESIGN-DECISIONS.md](DESIGN-DECISIONS.md)** - Design rationale
-
----
-
-## 🆘 Still Need Help?
-
-1. **Check Documentation:** [DOCUMENTATION-INDEX.md](DOCUMENTATION-INDEX.md)
-2. **Search Issues:** Check GitHub issues for similar problems
-3. **Ask for Help:** Contact your development team
-4. **Create Issue:** If bug found, create detailed issue report
-
----
-
-**Installation guide last updated: October 16, 2025**
-
-✅ **You're all set!** Happy coding! 🎉
+_อัปเดตล่าสุด: 16 ตุลาคม 2025_  
+_จัดทำโดยทีมพัฒนา Agent Wallboard System_
