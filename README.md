@@ -154,6 +154,7 @@ agent-wallboard/
 | `npm run preview` | แสดงผล build |
 | `npm run lint` | ตรวจสอบ ESLint |
 | `npm run type-check` | ตรวจสอบ TypeScript |
+| `npm run electron ` | เปิด electron |
 
 ---
 
