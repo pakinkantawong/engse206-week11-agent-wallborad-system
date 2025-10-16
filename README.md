@@ -69,7 +69,7 @@ npm run dev
 # หรือ
 yarn dev
 ```
-เปิดที่ [http://localhost:5173](http://localhost:5173)
+เปิดที่ ```bash[http://localhost:5173](http://localhost:5173)```
 
 ### ขั้นตอนที่ 4: Build สำหรับ Production
 ```bash
