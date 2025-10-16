@@ -247,4 +247,3 @@ socket.on('agent:status_change', (data) => {
 
 ---
 
-_อัปเดตล่าสุด: 16 ตุลาคม 2025_
