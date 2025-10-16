@@ -83,7 +83,7 @@ If you want to run this locally for development or customization:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/agent-wallboard.git
+git clone git@github.com:pakinkantawong/week11-agent-wallborad-system.git
 
 # Navigate to the project directory
 cd agent-wallboard
