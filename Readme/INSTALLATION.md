@@ -258,6 +258,3 @@ npm run dev -- --port 3000
 - [DESIGN-DECISIONS.md](DESIGN-DECISIONS.md) — เหตุผลการออกแบบ  
 
 ---
-
-_อัปเดตล่าสุด: 16 ตุลาคม 2025_  
-_จัดทำโดยทีมพัฒนา Agent Wallboard System_
