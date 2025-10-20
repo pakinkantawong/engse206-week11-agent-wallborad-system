@@ -76,6 +76,10 @@ yarn dev
 npm run build
 npm run preview
 ```
+### ขั้นตอนที่ 5 : เปิดด้วย eletron .js
+```bash
+npm run electron
+```
 
 ---
 
