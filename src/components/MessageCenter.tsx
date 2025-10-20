@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useImperativeHandle, useRef, useState } from 'react';
 import { Message } from '../types';
 import { ChevronDown, Send } from 'lucide-react';
 
@@ -8,11 +8,18 @@ interface MessageCenterProps {
   onSendMessage: (to: string, message: string) => void;
 }
 
-export function MessageCenter({ messages, onMarkAsRead, onSendMessage }: MessageCenterProps) {
+export type MessageCenterHandle = {
+  focusComposer: () => void;
+};
+
+export const MessageCenter = React.forwardRef<MessageCenterHandle, MessageCenterProps>(
+({ messages, onMarkAsRead, onSendMessage }, ref) => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'unread' | 'urgent'>('all');
   const [showAll, setShowAll] = useState(false);
   const [composeMessage, setComposeMessage] = useState('');
   const [composeTo, setComposeTo] = useState('');
+  const containerRef = useRef<HTMLDivElement>(null);
+  const composeTextareaRef = useRef<HTMLTextAreaElement>(null);
   
   const unreadCount = messages.filter(m => !m.isRead).length;
   
@@ -41,8 +48,18 @@ export function MessageCenter({ messages, onMarkAsRead, onSendMessage }: Message
     }
   };
   
+  useImperativeHandle(ref, () => ({
+    focusComposer: () => {
+      containerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      requestAnimationFrame(() => composeTextareaRef.current?.focus());
+    },
+  }));
+
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm h-full flex flex-col">
+    <div
+      ref={containerRef}
+      className="bg-white rounded-xl border border-gray-200 shadow-sm h-full flex flex-col"
+    >
       {/* Header */}
       <div className="p-4 border-b border-gray-200">
         <div className="flex items-center justify-between mb-3">
@@ -142,6 +159,7 @@ export function MessageCenter({ messages, onMarkAsRead, onSendMessage }: Message
         </select>
         
         <textarea
+          ref={composeTextareaRef}
           value={composeMessage}
           onChange={(e) => setComposeMessage(e.target.value)}
           placeholder="Type message..."
@@ -175,4 +193,6 @@ export function MessageCenter({ messages, onMarkAsRead, onSendMessage }: Message
       </div>
     </div>
   );
-}
+});
+
+MessageCenter.displayName = 'MessageCenter';

@@ -15,6 +15,16 @@ const createWindow = () => {
         }
     });
 
+    // Prevent the native minimise shortcut (Cmd/Ctrl+M) from stealing focus.
+    mainWindow.webContents.on('before-input-event', (event, input) => {
+        const isMessageShortcut =
+            (input.meta || input.control) && input.key?.toLowerCase() === 'm';
+
+        if (isMessageShortcut) {
+            event.preventDefault();
+        }
+    });
+
     if (!fs.existsSync(INDEX_HTML)) {
         const message = [
             'Unable to locate dist/index.html.',

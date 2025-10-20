@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Bell, Settings, User } from 'lucide-react';
 import { StatusDropdown } from './StatusDropdown';
 import { PersonalStatsWidget } from './PersonalStatsWidget';
-import { MessageCenter } from './MessageCenter';
+import { MessageCenter, MessageCenterHandle } from './MessageCenter';
 import { QuickActions } from './QuickActions';
 import { UpcomingSchedule } from './UpcomingSchedule';
 import { TipsWidget } from './TipsWidget';
@@ -12,6 +12,7 @@ import { toast } from 'sonner@2.0.3';
 
 export function AgentDashboard() {
   const [currentStatus, setCurrentStatus] = useState<Status>('available');
+  const messageCenterRef = useRef<MessageCenterHandle>(null);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
@@ -90,12 +91,69 @@ export function AgentDashboard() {
     },
   ];
   
-  const handleStatusChange = (newStatus: Status) => {
-    setCurrentStatus(newStatus);
-    toast.success(`Status changed to ${newStatus}`, {
-      duration: 2000,
+  const handleStatusChange = useCallback((newStatus: Status) => {
+    setCurrentStatus(prevStatus => {
+      if (prevStatus === newStatus) {
+        return prevStatus;
+      }
+
+      toast.success(`Status changed to ${newStatus}`, {
+        duration: 2000,
+      });
+
+      return newStatus;
     });
-  };
+  }, []);
+
+  useEffect(() => {
+    // Enable quick status changes and open the message center via the documented shortcuts.
+    const statusHotkeys: Record<string, Status> = {
+      F2: 'available',
+      F3: 'busy',
+      F4: 'break',
+    };
+
+    const shouldIgnoreKey = (target: EventTarget | null) => {
+      // Skip shortcuts when the user is typing in an editable field.
+      if (!(target instanceof HTMLElement)) {
+        return false;
+      }
+
+      const tagName = target.tagName;
+      return (
+        target.isContentEditable ||
+        tagName === 'INPUT' ||
+        tagName === 'TEXTAREA' ||
+        tagName === 'SELECT'
+      );
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || event.repeat || shouldIgnoreKey(event.target)) {
+        return;
+      }
+
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        event.key.toLowerCase() === 'm'
+      ) {
+        event.preventDefault();
+        messageCenterRef.current?.focusComposer();
+        return;
+      }
+
+      const status = statusHotkeys[event.key];
+      if (!status) {
+        return;
+      }
+
+      event.preventDefault();
+      handleStatusChange(status);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleStatusChange, messageCenterRef]);
   
   const handleMarkAsRead = (messageId: string) => {
     setMessages(prev => 
@@ -166,6 +224,7 @@ export function AgentDashboard() {
         {/* Right Column - Messages */}
         <div className="w-[400px]">
           <MessageCenter 
+            ref={messageCenterRef}
             messages={messages}
             onMarkAsRead={handleMarkAsRead}
             onSendMessage={handleSendMessage}
